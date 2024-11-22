@@ -20,6 +20,7 @@ int main() {
 
   MyFile.open("dogger.txt");
 
+  // This prints the dog to a file
   if (MyFile.is_open()) {
     MyFile << dog << endl;
     cout << "It Worked" << endl;
