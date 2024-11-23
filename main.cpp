@@ -1,5 +1,6 @@
 #include <fstream>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -18,13 +19,16 @@ int main() {
 
   fstream MyFile;
 
-  MyFile.open("dogger.txt", fstream::out);
+  for (int i; i < 10; i++) {
 
-  // This prints the dog to a file
-  if (MyFile.is_open()) {
-    MyFile << dog << endl;
-    cout << "It Worked" << endl;
-    MyFile.close();
+    MyFile.open("dogger_" + to_string(i) + ".txt", fstream::out);
+
+    // This prints the dog to a file
+    if (MyFile.is_open()) {
+      MyFile << dog << endl;
+      cout << "It Worked" << endl;
+      MyFile.close();
+    }
   }
 
   cout << dog << endl;
