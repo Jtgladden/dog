@@ -18,7 +18,7 @@ int main() {
 
   fstream MyFile;
 
-  MyFile.open("dogger.txt");
+  MyFile.open("dogger.txt", fstream::out);
 
   // This prints the dog to a file
   if (MyFile.is_open()) {
